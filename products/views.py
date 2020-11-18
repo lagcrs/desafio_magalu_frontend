@@ -2,17 +2,26 @@ from rest_framework.mixins import (CreateModelMixin, ListModelMixin,
                                    RetrieveModelMixin, UpdateModelMixin,
                                    DestroyModelMixin)
 from rest_framework.viewsets import GenericViewSet
-from .models import Products, Sellers
-from .serializers import ProductsSerializer, SellersSerializer, UserSerializer
+from .models import Products
+from .serializers import ProductsSerializer, UserSerializer
 from rest_framework import status
 from rest_framework.response import Response
+
+
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from rest_framework.views import APIView
 
+ 
 
-class SellersView(
+
+
+
+
+
+
+'''class SellersView(
         GenericViewSet,  # generic view functionality
         CreateModelMixin,  # handles posts
         RetrieveModelMixin, # handles gets for 1 seller
@@ -21,7 +30,7 @@ class SellersView(
 
 
     serializer_class = SellersSerializer
-    queryset = Sellers.objects.all()
+    queryset = Sellers.objects.all()'''
 
 
 
@@ -44,6 +53,7 @@ class ProductsView(
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 
 
@@ -117,3 +127,5 @@ class SignInView(APIView):
             'payload': None,
         }
         return Response(response_data, status=status.HTTP_403_FORBIDDEN)
+
+

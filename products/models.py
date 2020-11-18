@@ -18,7 +18,7 @@ class BaseModel(models.Model):
 # TODO: implement category field
 
 
-class Sellers(BaseModel):
+'''class Sellers(BaseModel):
     user = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
     name = models.CharField(max_length=30)
     cpf = models.CharField(max_length=11)
@@ -26,13 +26,13 @@ class Sellers(BaseModel):
     city = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.name
+        return self.name'''
 
 
 
 
 class Products(BaseModel):
-    seller = models.ForeignKey(Sellers, on_delete=models.PROTECT, null=True)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
     public_id = models.UUIDField(unique=True,
                                  default=uuid.uuid4,
                                  editable=False)
