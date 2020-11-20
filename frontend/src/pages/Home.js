@@ -60,8 +60,8 @@ function Home() {
                 <tr>
                   <th>Código</th>
                   <th>Título</th>
-                  <th>Valor</th>
-                  <th>Qtd em Estoque</th>
+                  <th>Preço Unitário</th>
+                  <th>Quantidade em Estoque</th>
                   <th>Editar</th>
                   <th>Inativar</th>
                 </tr>
