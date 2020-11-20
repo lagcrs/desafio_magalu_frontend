@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/images/logo_vc_no_magalu.png'
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand">
+            <Link to="/inicio" className="navbar-brand">
                 <img src={Logo} className="img-fluid" alt="Logo Você no Magalu" />
-            </a>
+            </Link>
 
             <button className="btn btn-danger my-2 my-sm-0" type="submit">
                 Sair
