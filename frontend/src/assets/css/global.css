@@ -1,6 +1,10 @@
 .img-fluid {
     width: 100px;
 }
+h2, h1 {
+    font-weight: 600;
+    padding-bottom: 20px;
+}
 #sidebarMenu {
     background-image: linear-gradient(to right top, #0059b3, #236fc6, #3a85da, #509cec, #66b3ff);
 }
@@ -28,6 +32,24 @@
     height: calc(100vh - 48px);
 }
 
+main.landing {
+    position: sticky;
+    height: 100vh;
+}
+
+main.landing .title{
+    padding-left: 40px;;
+}
+
+main.landing button a {
+    text-decoration: none;
+    color: white;
+}
+
+main.landing img{
+    width: 100%;
+}
+
 main .breadcrumb{
     background-color: white !important
 }
@@ -38,8 +60,6 @@ main.home .card-title {
 
 main.home h2 {
     padding-top: 40px;
-    padding-bottom: 20px;
-    font-weight: 600;
 }
 
 main.home table .btn-action a{
